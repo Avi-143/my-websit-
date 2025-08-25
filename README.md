@@ -1,1 +1,54 @@
 # my-websit-
+<html>
+<menu>
+   <li> Home</li>
+   <li>Registrantion<form>
+User name:=<br>
+<input type="text" name="username"><br>
+User password:<br>
+<input type="password" name="psw">
+<input type="Submit"value="Submit">
+  </form>
+</li>
+
+<body>
+<form action ="/action_page.php"method="get">
+<h1>New Registrantion</h1>
+Enter name:<input type="name" name="Sname" placeholder="enter student name" required>
+<br>
+Enter fullname:<input type="name"name="Sname" placeholder="Enter student Name" required>
+<br>
+Enter DOB:<input type="date" name="bday" min="2000-01-02"><br>
+Enter age:<input type="number" name="age"><br>
+Select Gender:<input type="radio" name="Gender"  value="Mail">Mail
+<input type="radio" name="Gender"value="Female">Female<br>
+Enter email:<input type="email"><br>
+<b>Your State</b>
+<Select Name="state">
+     <option>Uttar Pradesh</option>
+	 <Option>Madhya Pradesh</Option>
+	 <Option>Himanchal Pradesh</Option>
+	 <Option>Andra Pradesh</Option>
+	 <Option>Bihar</Option>
+	 <Option>Asam</Option>
+	 <Option>Arunanchal Pradesh</Option>
+	 <Option>Hariyana</Option>
+	 <Option>Jharkhand</Option>
+	 <Option>Tamil naydu</Option>
+	 <Option>Jammu kasmir</Option>
+</Select>
+
+Select image:
+<input type="file"id="img" name="img"accept="image"/*"><br>
+Select Qualification
+<input type="checkbox" name="Quali" value="10">10th
+<input type="checkbox" name="Quali" value="11">11
+<input type="checkbox" name="Quali" value="BA/BCOM/B.sc"checked>BA/BCOM/B.sc<br>
+Select your favorite color:<input type="color" name="favorite"><br>
+<input type="Submit"value="Submit">
+<input type="Reset" value="Reset"></Form>
+</body>
+<li>Contact-us</li>
+<li> About-us</li>
+</menu>
+</html>
