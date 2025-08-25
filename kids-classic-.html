@@ -1,0 +1,337 @@
+
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kids Data Form – Simple & Mobile Friendly</title>
+  <meta name="description" content="A classic, lightweight HTML form to enter kids' details. Works on any phone browser. No frameworks.">
+  <meta name="keywords" content="HTML form, simple form, mobile friendly, classic HTML, kids data">
+  <meta property="og:title" content="Kids Data Form – Simple & Mobile Friendly">
+  <meta property="og:description" content="Classic single-file HTML form that works on any phone.">
+  <meta property="og:type" content="website">
+  <style>
+    /* Classic, no-frills CSS for wide compatibility */
+    html,body{margin:0;padding:0;font:16px/1.4 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Arial,sans-serif;color:#111;background:#fff}
+    .container{max-width:900px;margin:16px auto;padding:0 12px}
+    h1{font-size:22px;margin:8px 0 12px}
+    p{margin:0 0 12px}
+    .toolbar{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 12px}
+    button{cursor:pointer;border:1px solid #ccc;background:#f7f7f7;padding:8px 12px;border-radius:6px}
+    button:active{transform:scale(.98)}
+    .table-wrap{overflow:auto;border:1px solid #e5e5e5;border-radius:6px}
+    table{border-collapse:collapse;width:100%;min-width:720px}
+    th,td{border-bottom:1px solid #eee;padding:8px;text-align:left}
+    thead th{background:#f5f5f5}
+    input,textarea,select{width:100%;padding:7px;border:1px solid #ccc;border-radius:4px}
+    input[type="checkbox"]{width:auto}
+    .note{font-size:13px;color:#555;margin-top:8px}
+    @media (max-width:640px){
+      table{min-width:640px}
+      h1{font-size:20px}
+    }
+    @media print{
+      button,.toolbar{display:none}
+      body{color:#000}
+      .table-wrap{border:none}
+    }
+  </style>
+</head>
+<body>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Do Bacchon ka Data Form (HTML)</title>
+  <style>
+    :root{
+      --bg:#0f172a;/* slate-900 */
+      --card:#111827cc;/* semi */
+      --ink:#e5e7eb;/* gray-200 */
+      --muted:#94a3b8;/* slate-400 */
+      --accent:#22d3ee;/* cyan-400 */
+      --accent2:#a78bfa;/* violet-400 */
+      --danger:#ef4444;/* red-500 */
+      --ok:#10b981;/* emerald-500 */
+      --warn:#f59e0b;/* amber-500 */
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(135deg,#0b1020,#111827 45%,#0b1020);color:var(--ink);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial}
+    .wrap{max-width:1100px;margin:24px auto;padding:16px}
+    .card{background:var(--card);backdrop-filter: blur(6px);border:1px solid #1f2937;border-radius:18px;padding:18px;box-shadow:0 10px 30px #00000055}
+    h1{font-size:clamp(20px,4vw,32px);margin:0 0 12px}
+    p.lead{color:var(--muted);margin:0 0 16px}.toolbar{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 10px}
+.toolbar .spacer{flex:1}
+button, .btn{
+  border:1px solid #30363d;color:var(--ink);background:#0b1220;
+  padding:10px 12px;border-radius:12px;cursor:pointer;transition:.2s transform, .2s background, .2s opacity;
+  display:inline-flex;align-items:center;gap:8px;font-weight:600
+}
+button:hover{background:#131c2e}
+button:active{transform:scale(.98)}
+.primary{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#0b1020;border:none}
+.danger{background:linear-gradient(135deg,#ef4444,#f97316);border:none}
+.ghost{background:transparent;border-color:#253046;color:var(--muted)}
+
+.table-wrap{overflow:auto;border-radius:14px;border:1px solid #1f2937}
+table{width:100%;border-collapse:separate;border-spacing:0;min-width:780px;background:#0b1220}
+thead th{position:sticky;top:0;background:#0d1629;color:#cbd5e1;text-align:left;font-weight:700}
+th,td{padding:10px 12px;border-bottom:1px solid #1f2937}
+tbody tr:hover{background:#0e1a2f}
+tbody tr.invalid{outline:2px dashed var(--danger);outline-offset:-2px}
+
+input,select,textarea{width:100%;padding:8px 10px;background:#0b1020;color:var(--ink);border:1px solid #273244;border-radius:10px}
+input::placeholder,textarea::placeholder{color:#64748b}
+input[type="checkbox"]{width:auto}
+
+.note{font-size:13px;color:#9ca3af;margin-top:8px}
+.footer{display:flex;justify-content:space-between;align-items:center;margin-top:12px;color:#9ca3af;font-size:13px}
+.badge{padding:4px 8px;border-radius:999px;background:#0f1b2f;border:1px solid #1f2937;color:#cbd5e1}
+.req{color:var(--warn);font-weight:700}
+.success{color:var(--ok)}
+@media print{body{background:#fff;color:#000}.card{box-shadow:none;border:none;background:#fff}.toolbar{display:none}input,textarea,select{border:1px solid #ddd;background:#fff;color:#000}}
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>बच्चों का डेटा फॉर्म (HTML)</h1>
+      <p class="lead">दो बच्चों (या उससे अधिक) का डेटा भरने के लिए साधारण, प्रिंटेबल और CSV डाउनलोड योग्य फॉर्म।</p><div class="toolbar">
+    <button class="primary" id="addRowBtn" title="Nayi row jodiye">➕ Row जोड़ें</button>
+    <button class="ghost" id="removeSelectedBtn" title="Select ki gayi rows हटाएँ">🗑️ चुनी हुई Row हटाएँ</button>
+    <button class="ghost" id="clearBtn" title="Saara data saaf करें">♻️ सब साफ</button>
+    <div class="spacer"></div>
+    <button id="downloadBtn" title="CSV file download करें">⬇️ CSV डाउनलोड</button>
+    <button id="printBtn" title="Print / PDF">🖨️ प्रिंट</button>
+  </div>
+
+  <div class="table-wrap">
+    <table id="dataTable" aria-label="Do bacchon ka data table">
+      <thead>
+        <tr>
+          <th style="width:44px"><input type="checkbox" id="selectAll" aria-label="Select all" /></th>
+          <th style="width:56px">#</th>
+          <th>नाम <span class="req">*</span></th>
+          <th>उम्र</th>
+          <th>कक्षा</th>
+          <th>स्कूल</th>
+          <th>अभिभावक का नाम</th>
+          <th>मोबाइल</th>
+          <th style="min-width:200px">पता</th>
+          <th>Remarks</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+	<input type="submit" value="submit">
+
+  </div>
+
+  <div class="note">नोट: <span class="req">*</span> वाले फील्ड जरूरी हैं। डेटा अपने-आप सेव होता है (इस डिवाइस पर) — ब्राउज़र बदलेंगे तो खाली दिखेगा।</div>
+  <div class="footer">
+    <span class="badge" id="status">Ready</span>
+    <span>Made with ♥ for quick data entry</span>
+  </div>
+</div>
+
+  </div>  <script>
+    const tableBody = document.querySelector('#dataTable tbody');
+    const addRowBtn = document.getElementById('addRowBtn');
+    const removeSelectedBtn = document.getElementById('removeSelectedBtn');
+    const clearBtn = document.getElementById('clearBtn');
+    const downloadBtn = document.getElementById('downloadBtn');
+    const printBtn = document.getElementById('printBtn');
+    const selectAll = document.getElementById('selectAll');
+    const statusBadge = document.getElementById('status');
+    const STORAGE_KEY = 'do_bacchon_form_v1';
+
+    function setStatus(msg, ok=false){
+      statusBadge.textContent = msg;
+      statusBadge.style.color = ok ? 'var(--ok)' : 'var(--ink)';
+    }
+
+    function rowTemplate(index, data={}){
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td><input type="checkbox" class="row-check" aria-label="select row"></td>
+        <td class="row-index">${index}</td>
+        <td><input required name="name" placeholder="नाम" value="${data.name ?? ''}"></td>
+        <td><input name="age" type="number" min="0" max="25" placeholder="उम्र" value="${data.age ?? ''}"></td>
+        <td><input name="class" placeholder="कक्षा" value="${data.class ?? ''}"></td>
+        <td><input name="school" placeholder="स्कूल" value="${data.school ?? ''}"></td>
+        <td><input name="guardian" placeholder="अभिभावक का नाम" value="${data.guardian ?? ''}"></td>
+        <td><input name="mobile" placeholder="मोबाइल" pattern="[0-9]{10}" title="10 digit mobile" value="${data.mobile ?? ''}"></td>
+        <td><input name="address" placeholder="पता" value="${data.address ?? ''}"></td>
+        <td><input name="remarks" placeholder="Remarks" value="${data.remarks ?? ''}"></td>
+      `;
+      // Save changes automatically
+      tr.querySelectorAll('input,select,textarea').forEach(el=>{
+        el.addEventListener('input', ()=>{
+          tr.classList.remove('invalid');
+          saveToLocal();
+        })
+      });
+      return tr;
+    }
+
+    function renumber(){
+      [...tableBody.querySelectorAll('.row-index')].forEach((td,i)=> td.textContent = i+1);
+    }
+
+    function addRow(prefill={}){
+      const tr = rowTemplate(tableBody.children.length + 1, prefill);
+      tableBody.appendChild(tr);
+      renumber();
+      saveToLocal();
+    }
+
+    function removeSelected(){
+      [...tableBody.querySelectorAl…
+	  <input type="submit" value="submit">
+
+  <div class="container">
+    <h1>Kids Data (Simple HTML)</h1>
+    <p>Classic single-file HTML that works on any phone. Start typing below; you can add more rows if needed.</p><div class="toolbar">
+  <button id="addRow">Add Row</button>
+  <button id="deleteChecked">Delete Checked</button>
+  <button id="printPage">Print</button>
+</div>
+
+<div class="table-wrap">
+  <table id="kidsTable">
+    <thead>
+      <tr>
+        <th><input type="checkbox" id="checkAll" title="Select all"></th>
+        <th>#</th>
+        <th>Name *</th>
+        <th>Age</th>
+        <th>Class</th>
+        <th>School</th>
+        <th>Guardian</th>
+        <th>Mobile</th>
+        <th>Address</th>
+        <th>Remarks</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="checkbox" class="row-check"></td>
+        <td class="idx">1</td>
+        <td><input name="name" required></td>
+        <td><input name="age" type="number" min="0" max="25"></td>
+        <td><input name="class"></td>
+        <td><input name="school"></td>
+        <td><input name="guardian"></td>
+        <td><input name="mobile" pattern="[0-9]{10}" title="10 digit mobile"></td>
+        <td><input name="address"></td>
+        <td><input name="remarks"></td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" class="row-check"></td>
+        <td class="idx">2</td>
+        <td><input name="name" required></td>
+        <td><input name="age" type="number" min="0" max="25"></td>
+        <td><input name="class"></td>
+        <td><input name="school"></td>
+        <td><input name="guardian"></td>
+        <td><input name="mobile" pattern="[0-9]{10}" title="10 digit mobile"></td>
+        <td><input name="address"></td>
+        <td><input name="remarks"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p class="note">Fields marked * are required. Tip: Save this file as <code>kids-classic.html</code> and open it on any phone browser.</p>
+
+  </div>  <script>
+    // Kept very small & classic for wide browser support
+    (function(){
+      var table = document.getElementById('kidsTable');
+      var tbody = table.getElementsByTagName('tbody')[0];
+      var addBtn = document.getElementById('addRow');
+      var delBtn = document.getElementById('deleteChecked');
+      var printBtn = document.getElementById('printPage');
+      var checkAll = document.getElementById('checkAll');
+
+      function renumber(){
+        var idx = tbody.querySelectorAll('.idx');
+        for(var i=0;i<idx.length;i++){ idx[i].textContent = i+1; }
+      }
+
+      function addRow(){
+        var tr = document.createElement('tr');
+        tr.innerHTML = '<td><input type="checkbox" class="row-check"></td>'+
+                       '<td class="idx"></td>'+
+                       '<td><input name="name" required></td>'+
+                       '<td><input name="age" type="number" min="0" max="25"></td>'+
+                       '<td><input name="class"></td>'+
+                       '<td><input name="school"></td>'+
+                       '<td><input name="guardian"></td>'+
+                       '<td><input name="mobile" pattern="[0-9]{10}" title="10 digit mobile"></td>'+
+                       '<td><input name="address"></td>'+
+                       '<td><input name="remarks"></td>';
+        tbody.appendChild(tr);
+        renumber();
+      }
+
+      function deleteChecked(){
+        var rows = tbody.getElementsByTagName('tr');
+        // convert HTMLCollection to array for safe removal
+        var list = [];
+        for(var i=0;i<rows.length;i++){ list.push(rows[i]); }
+        for(var j=0;j<list.length;j++){
+          var cb = list[j].querySelector('.row-check');
+          if(cb && cb.checked){ tbody.removeChild(list[j]); }
+        }
+        checkAll.checked = false;
+        renumber();
+      }
+
+      addBtn.onclick = addRow;
+      delBtn.onclick = deleteChecked;
+      printBtn.onclick = function(){ window.print(); };
+      checkAll.onchange = function(){
+        var boxes = tbody.querySelectorAll('.row-check');
+        for(var i=0;i<boxes.length;i++){ boxes[i].checked = checkAll.checked; }
+      };
+
+      renumber();
+    })();
+  </script></body>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Boi Profile</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="https://via.placeholder.com/150" alt="Profile Photo" class="profile">
+        <h1>Avi kumar </h1>
+        <p><em>Student | Web Developer | Gamer</em></p>
+
+        <div class="info">
+            <h2>About Me</h2>
+            <p>Hi! I'm Avi, a passionate student who loves coding and gaming. I enjoy learning new things and building cool projects on the web.</p>
+
+            <h2>Contact Info</h2>
+            <p><strong>Email:</strong> kua49667@gmail.com</p>
+            <p><strong>Phone:</strong> +91 9565413692</p>
+
+            <h2>Social Media</h2>
+            <p class="social">
+                <a href="#">Instagram</a> |143_ak_edition
+                <a href="#">Facebook</a> |Avinash kumar
+                <a href="#">LinkedIn</a> kua49667@gmail.com
+            </p>
+        </div>
+    </div>
+<input type="submit" value="submit">
+
+</body>
+</html>
